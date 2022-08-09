@@ -18,3 +18,5 @@ jobs:
         port: ${{ secrets.PORT }}
         source: "run_unit_tests.sh"
         target: "run_unit_tests.sh"
+if: ${{ failure() }}
+uses: mxschmitt/action-tmate@v3
