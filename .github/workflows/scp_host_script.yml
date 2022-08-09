@@ -1,5 +1,4 @@
 name: 'SCP test script'
-description: 'SCP test script to remote host making use of https://github.com/appleboy/scp-action'
 
 on: [push]
 jobs:
