@@ -1,8 +1,5 @@
 name: 'SCP test script'
-uses: 'appleboy/scp-action@master'
-
 on: [push]
-
 jobs:
 
   build:
