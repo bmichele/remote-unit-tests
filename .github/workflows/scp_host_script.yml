@@ -1,19 +1,12 @@
 name: 'SCP test script'
+uses: 'appleboy/scp-action@master'
 
 on: [push]
-jobs:
 
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: copy file via ssh password
-      uses: appleboy/scp-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        source: "run_unit_tests.sh"
-        target: "run_unit_tests.sh"
+with:
+  host: ${{ secrets.HOST }}
+  username: ${{ secrets.USERNAME }}
+  password: ${{ secrets.PASSWORD }}
+  port: ${{ secrets.PORT }}
+  source: "run_unit_tests.sh"
+  target: "run_unit_tests.sh"
