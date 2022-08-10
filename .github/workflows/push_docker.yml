@@ -40,4 +40,6 @@ jobs:
         proxy_host: ${{ secrets.PROXY_HOST }}
         proxy_username: ${{ secrets.PROXY_USERNAME }}
         proxy_key: ${{ secrets.PROXY_KEY }}
-        script: whoami
+        script: |
+          whoami
+          ls -al
