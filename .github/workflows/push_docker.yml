@@ -41,5 +41,5 @@ jobs:
         proxy_username: ${{ secrets.PROXY_USERNAME }}
         proxy_key: ${{ secrets.PROXY_KEY }}
         script: |
-          whoami
-          sudo ls -al
+          docker pull micheb/remote-unit-tests:latest
+          docker run micheb/remote-unit-tests:latest
