@@ -43,4 +43,6 @@ jobs:
         script: |
           docker pull micheb/remote-unit-tests:latest
           docker run micheb/remote-unit-tests:latest
-          docker rmi micheb/remote-unit-tests:latest
+          ID=$(docker ps -a | grep micheb/remote-unit-tests:latest | head -n1 | sed -e 's/\s.*$//')
+          docker stop $ID
+          docker rm $ID
