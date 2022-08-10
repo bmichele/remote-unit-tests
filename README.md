@@ -1,5 +1,8 @@
 # remote-unit-tests
 
+## Requirements
+
+On the host, [install Docker](https://docs.docker.com/engine/install/) if you don't have it already.
 
 ## Secrets
 

@@ -28,12 +28,11 @@ jobs:
 
   test:
     name: 'Run unit tests'
-    needs: docker
+    # needs: docker
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: copy file via ssh password
-      uses: appleboy/scp-action@master
+    - name: execure remote ssh commands
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
@@ -41,5 +40,4 @@ jobs:
         proxy_host: ${{ secrets.PROXY_HOST }}
         proxy_username: ${{ secrets.PROXY_USERNAME }}
         proxy_key: ${{ secrets.PROXY_KEY }}
-        source: "run_unit_tests.sh"
-        target: "run_unit_tests.sh"
+        script: whoami
