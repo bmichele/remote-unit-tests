@@ -43,3 +43,4 @@ jobs:
         script: |
           docker pull micheb/remote-unit-tests:latest
           docker run micheb/remote-unit-tests:latest
+          docker rmi micheb/remote-unit-tests:latest
