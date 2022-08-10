@@ -42,4 +42,4 @@ jobs:
         proxy_key: ${{ secrets.PROXY_KEY }}
         script: |
           whoami
-          ls -al
+          sudo ls -al
