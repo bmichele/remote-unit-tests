@@ -28,7 +28,7 @@ jobs:
 
   test:
     name: 'Run unit tests'
-    # needs: docker
+    needs: docker
     runs-on: ubuntu-latest
     steps:
     - name: execure remote ssh commands
