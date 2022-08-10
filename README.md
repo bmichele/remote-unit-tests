@@ -15,3 +15,8 @@ For the actions, the following secrets are needed:
  * `PROXY_KEY` private key tp access the proxy host. Remember to add the public key in the `.ssh/authorized_keys` of the proxy
  * `DOCKERHUB_USER` dockerhub user (to push docker images)
  * `DOCKERHUB_TOKEN` dockerhub token (you need to generate one from your dockerhub profile)
+
+## Credits
+
+* [appleboy/ssh-action](https://github.com/appleboy/ssh-action/blob/master/README.md#multiple-commands)
+* [build-and-push-docker-images](https://github.com/marketplace/actions/build-and-push-docker-images)

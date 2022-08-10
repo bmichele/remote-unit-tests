@@ -31,7 +31,7 @@ jobs:
     needs: docker
     runs-on: ubuntu-latest
     steps:
-    - name: execure remote ssh commands
+    - name: pull and run docker image on the host
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
